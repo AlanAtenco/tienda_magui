@@ -1,0 +1,98 @@
+/* General container for the cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 30px; /* Increased gap between the cards */
+    margin-top: 20px;
+}
+
+/* Card styles */
+.card {
+    background-color: #f5a9b8; /* Soft and bright pink for a playful feel */
+    background-image: linear-gradient(45deg, #f5a9b8 30%, #fffc98 100%); /* Pink to light yellow gradient */
+    border-radius: 20px; /* Rounded corners for a soft look */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease; /* Added box-shadow transition */
+    padding: 25px; /* Increased padding for more space inside the card */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; 
+    height: 550px; /* Increased height for better image display */
+    border: 5px solid #fbd2e8; /* Playful border with light pink */
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Bigger shadow on hover for fun interaction */
+}
+
+/* Image styles */
+.card-image {
+    width: 100%;
+    height: 250px; /* Slightly reduced height for more space for text */
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px; /* Slightly smaller margin */
+}
+
+/* Card info styles */
+.card-info {
+    padding: 0 10px;
+    text-align: center;
+    flex-grow: 1; /* Allow info section to take remaining space */
+    color: #555; /* Dark gray text for good readability */
+}
+
+.product-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ff6f61; /* Bright coral for the product name */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun, playful font */
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff; /* White text for price for high contrast */
+    background-color: #ff6f61; /* Bright coral background */
+    padding: 8px 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Button styles */
+.btn-action {
+    background-color: #fffc98; /* Soft yellow for the action button */
+    color: #ff6f61; /* Coral color for the button text */
+    border: none;
+    padding: 12px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1.1rem;
+}
+
+.btn-action:hover {
+    background-color: #f5a9b8; /* Pink background for hover effect */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    color: white; /* White text when hovered */
+}
+
+/* Responsive Design: Stack the cards for smaller screens */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-container {
+        grid-template-columns: 1fr; /* 1 card per row on small screens */
+    }
+}

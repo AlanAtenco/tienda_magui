@@ -1,0 +1,256 @@
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.navbar {
+    background-color: #FFC0CB;
+    padding: 15px 0;
+}
+
+.navbar-brand img {
+    max-height: 50px;
+}
+
+.search-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.form-control {
+    width: 300px;
+}
+
+.form-control:focus {
+    border-color: #FF69B4;
+    box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.25);
+}
+
+.btn-outline-success,
+.btn-outline-primary {
+    color: #FF1493;
+    border-color: #FF1493;
+}
+
+.btn-outline-success:hover,
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #FF1493;
+    border-color: #FF1493;
+}
+
+.dropdown-menu {
+    border-color: #FF69B4;
+}
+
+.dropdown-item:hover {
+    background-color: #FFC0CB;
+}
+
+/* Estilos para los títulos de sección */
+.section-title {
+    color: #FF1493;
+    font-size: 2em;
+    text-align: center;
+    margin: 50px 0 30px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #FFC0CB;
+}
+
+/* Estilos para la sección principal */
+.main-content {
+    flex: 1;
+    padding: 40px 0;
+    background-color: #ffffff;
+}
+
+/* Contenedor de imagen principal */
+.main-image-container {
+    margin: 20px 0 40px 0;
+}
+
+/* Imágenes secundarias */
+.secondary-images-container {
+    margin: 40px 0 90px 0;
+}
+
+.secondary-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Estilo para las descripciones debajo de las imágenes */
+.image-description {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.product-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.product-price {
+    font-size: 0.9rem;
+    color: #FF1493;
+    margin: 0;
+}
+
+/* Contenedor de placeholder */
+.placeholder-image {
+    background-color: transparent;
+    border: 2px dashed transparent;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Imagen principal más grande */
+.main-image-container .placeholder-image {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #666666;
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 40px 0 20px;
+    margin-top: auto; 
+}
+
+.footer-column h4 {
+    color: #FFC0CB;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    padding-left: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #FFC0CB;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: start;
+}
+
+.social-icons li {
+    margin-right: 15px;
+}
+
+.social-icons li a {
+    font-size: 1.5em;
+}
+
+hr {
+    border-top: 1px solid #333;
+    margin: 30px 0;
+}
+
+.footer-info {
+    text-align: center;
+}
+
+.website {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #FFC0CB;
+    margin-bottom: 10px;
+}
+
+.contact, .email, .address {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.footer-info i {
+    margin-right: 8px;
+    color: #FFC0CB;
+}
+
+/* Media query para dispositivos mÃ³viles */
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 0 15px;
+    }
+
+    .footer-column {
+        margin-bottom: 30px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-info {
+        padding: 0 15px;
+    }
+
+    .website {
+        font-size: 1.1em;
+    }
+
+    .contact, .email, .address {
+        font-size: 0.8em;
+    }
+    .main-image-container .placeholder-image {
+        height: 250px;
+    }
+
+    .secondary-images-container .placeholder-image {
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .section-title {
+        font-size: 1.5em;
+        margin: 30px 0 20px 0;
+    }
+
+    .secondary-images-container {
+        margin: 30px 0 50px 0;
+    }
+}

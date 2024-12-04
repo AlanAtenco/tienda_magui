@@ -1,0 +1,169 @@
+/* General container for the cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 30px; /* Increased gap between the cards */
+    margin-top: 20px;
+}
+
+/* Card styles */
+.card {
+    background-color: #d4d4d8;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Darker shadow for a more defined look */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    padding: 20px; /* Increased padding for more space inside the card */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; 
+    height: 550px; /* Increased height for better image display */
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Image styles */
+.card-image {
+    width: 100%;
+    height: 300px; /* Increased height for better image visibility */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px; 
+}
+
+/* Card info styles */
+.card-info {
+    padding: 0 10px;
+    text-align: center;
+    flex-grow: 1; /* Allow info section to take remaining space */
+}
+
+.product-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #000000; /* White text for good contrast */
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000; /* White color for price to match the text */
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.btn-action {
+    background-color: #1d090c; /* Bright yellow-orange color for action button */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btn-action:hover {
+    background-color: #e67e22; /* Darker orange for hover effect */
+}
+
+       /* Estilos para el modal */
+       #modal-form {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    
+    .modal-content {
+        background-color: #ff9ceb;
+        padding: 30px;
+        border-radius: 10px;
+        width: 400px;
+        max-width: 90%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    label {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 8px;
+        display: block;
+    }
+    
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    
+    input:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+    
+    .modal-actions {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .btn-submit, .btn-cancel {
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+    
+    .btn-submit {
+        background-color: #ff00d9;
+        color: white;
+    }
+    
+    .btn-submit:hover {
+        background-color: #fe00b2;
+    }
+    
+    .btn-cancel {
+        background-color: #dc3545;
+        color: white;
+    }
+    
+    .btn-cancel:hover {
+        background-color: #c82333;
+    }
+/* Responsive Design: Stack the cards for smaller screens */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-container {
+        grid-template-columns: 1fr; /* 1 card per row on small screens */
+    }
+}
